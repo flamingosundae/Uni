@@ -1,0 +1,20 @@
+Perché virtualizzazione?
+Vantaggi da segregazione + praticità a livello di disponibilità environment.
+MA abbiamo degli svantaggi, legati al fatto che la concessione di risorse sottrae dall'host OS. Una VM ha una disponibilità di risorse statica, se vogliamo cambiare
+l'allocazione va arrestata la macchina e riavviata. 
+
+A questo scopo usiamo CONTAINER: micro-VM ad allocazione risorse DINAMICA, che contengono le minime risorse base per l'avvio del guest OS.
+Questo concetto può creare una rete di microservizi che comunichino l'uno con l'altro, con ogni servizio associato ad un container.
+
+Prendiamo, per esempio, uno scenario di prog backend che gestisca gli utenti, diciamo 40, tranne per specifici momenti con ramp-up istant a migliaia di utenti.
+Ha senso usare una VM intera? No, spreca risorse, quando abbiamo 40 utenti. Usiamo quindi CONTAINER, usandone di più al ramp-up.
+
+Orchestrator come software di GESTIONE CONTAINER: gestisce i container in modo efficace. Definiamo chi opera sui container come Orchestration Engineer, con sottocategoria Dev Ops Engineer.
+
+DOCKER: permette di descrivere docker file con pacchetti specifici e portabili, che funzionano su envo diversi. Permette di operare equamente, in modo da trovare falle e bug
+in modo sincronizzato.
+
+ANSIBLE: automatizza set di istruzioni su un x environment.
+
+JENKINS: crea script come Ansible, ma permette target di specifici container. Crea dei jobs che operano su dati container. 
+

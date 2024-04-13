@@ -1,0 +1,30 @@
+AWS
+
+Definizione
+
+
+è fondato su 6 pilastri.
+
+OPERATIONAL EXCELLENCE: l'abilità di supportare lo sviluppo e
+SECURITY: sfrutta il cloud tech per protegggere dati, sistemi e risorse in modo che la sicurezza complessiva aumenti.
+RELIABILITY: permette ai workload di funzionare nella loro interezza, in modo consistente e controllato.
+EFFICIENCY: uso delle risorse più efficienti possibili, e mantenimento di uno x stato di efficienza.
+OTTIMIZZAZIONE COSTO: mirare a raggiungere il price point più possibile.
+SUSTAINABILITY
+
+
+Termini base: 
+COMPONENT: risorsa base per incontrare un requirement. Solitamente codice.
+WORKLOAD: tutto ciò che complessivamente crea valore di mercato.
+ARCHITETTURA: come i componenti nel workload lavorano insieme. Il focus centrale dei diagrammi di architettura è il modo in cui i componenti del workload interagiscono.
+TECHNOLOGY PORTFOLIO: l'insieme dei workload che creano business value. Una specie di lista della spesa, in parole molto povere.
+LoE: il tempo e l'impegno necessari per l'implementazione.
+High: più settimane/mesi.
+Medium:più giorni/settimane.
+Low:più ore/giorni.
+
+I pilastri funzionano in logica, perlopiù, tradeoff: un'implementazione in un sistema potrebbe migliorare uno dei pilastri, a scapito di un altro.
+Non sempre, però.
+
+AWS distribuisce le capacità in team che lavorano allo stesso obiettivo con alcune zone di overlap tra di loro.
+Ha il tradeoff che richiede un sistema di standard da superare, imposto tramite la presenza di un esperto in ogni team e un sistema di check automatizzati.

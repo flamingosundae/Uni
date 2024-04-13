@@ -1,0 +1,35 @@
+>Linux: kernel su cui è basato GNU e l'omonimo sistema operativo. Kernel come translator tra hardware e software. Rende più concrete operazioni complesse.
+Sopra Linux c'è GNULinux. 
+>All'avvio di Linux (SO) hai sempre una shell: primo processo operativo a scopo di comunicare con il kernel. PRIMO PASSO di ogni avvio. 
+Shell come PROCESSO 1: avvia una serie di processi in una struttura ad albero, di cui posso scegliere di uccidere i rami. 
+E.g. Picom, processo di animazione delle finestre, viene interrotto per favorire le prestazioni. "KILL an application".
+Segnalato da PID, Process ID. 
+Struttura con il quale posso impostare comandi per l'OS.
+
+mkdir 
+
+>Su Linux -h come segnale generale di Help, manuale di istruzioni di un determinato pacchetto.
+-a come all, per visualizzare ogni file.
+cd "Change directory" Sceglie cartella di visualizzazione
+ls "List directort contents" Visualizza tutti i file di una cartella. [] OPZIONALE
+man *nome comando* "Manual" Visualizza il manuale del comando
+clear O ctrl+L rimuove le stringhe visualizzate.
+
+Nell'OS, come anche nei VG, ci sono FILE NASCOSTI: se rinominati con ., non sono accessibili se non attraverso specifici comandi. Serve per ragioni di organizzazione.
+Tutto è file.
+Qualsiasi cosa creata/spostata in tmp viene eliminata al riavvio del OS. 
+Qualsiasi file o output indirizzato a null viene eliminato ISTANTANEAMENTE.
+
+Lista breve comandi:
+mkdir: crea una nuova cartella.
+ls: visualizza lista file in una data cartella.
+clear: pulisce la stringa dei comandi. Alt key CTR+L.
+cd: cambia cartella. Formato cd *nomecartella*.
+touch: update the access and modification times of each FILE to the current time.
+man: visualizza manuale di istruzioni di un dato pacchetto.
+cat: visualizza i contenuti di un dato file.
+echo: ripete un output. Con >> puoi scegliere la destinazione.
+mv: sposta un file. Se spostato nella stessa cartella, puoi rinominare il file.
+
+
+

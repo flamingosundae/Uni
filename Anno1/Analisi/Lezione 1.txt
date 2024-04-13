@@ -1,0 +1,9 @@
+NUMERI COMPLESSI
+
+x^2+1=0 
+>Ogni polinomio si può scomporre in POLINOMI IRRIDUCIBILI (non scomponibili a loro volta)
+Quali sono i polinomi irriducibili? (X-a) 
+Un polinomio può avere al minimo grado 1.
+X^2 + by + c con b e c appartenente ai Reali.
+Per verificare che il polinomio sia riducibile, si deve verificare che Delta sia maggiore di 0
+b^2 -4c < 0
