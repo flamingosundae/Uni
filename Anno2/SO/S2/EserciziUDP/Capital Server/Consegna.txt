@@ -1,0 +1,17 @@
+
+Ecco un esercizio di programmazione delle socket UDP abbastanza semplice:
+
+Descrizione dell'esercizio:
+Scrivi due script C, uno per il server e uno per il client, che comunicano tramite socket UDP. Il server riceve un messaggio dal client, lo converte in maiuscolo e lo invia indietro al client, che lo stampa a schermo.
+
+Istruzioni per il server:
+
+    Crea un server UDP che ascolta su una porta specifica.
+    Quando riceve un messaggio dal client, converte il messaggio in maiuscolo.
+    Invia il messaggio convertito al client.
+
+Istruzioni per il client:
+
+    Crea un client UDP.
+    Invia un messaggio al server.
+    Ricevi la risposta dal server e stampa il messaggio convertito a schermo.
