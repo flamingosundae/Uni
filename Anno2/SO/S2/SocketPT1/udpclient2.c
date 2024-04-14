@@ -46,6 +46,7 @@ int main(int argc, char *argv[]) {
         NON crea una connessione con una socket remota, ma serve solo a indicare l'indirizzo:
         * cui sono indirizzati i dati in maniera predefinita (quando usiamo send invece di sendto)
         * da cui soltanto possiamo ricevere dati (quindi possiamo usare recv invece di recvfrom)
+        * in altre parole, impostiamo un mittente/destinatario di default.
     */
     connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr));
 

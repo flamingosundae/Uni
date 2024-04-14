@@ -7,7 +7,7 @@
 void print_number(uint32_t); /* Prototipo di una funzione ausiliaria definita in fondo*/
 
 int main(int argc, char *argv[]) {
-    uint32_t n = 0x01234567u; /* Il prefisso 0x per il formato esadecimale, il suffisso u per unsigned */
+    uint32_t n = 0x01234567u;
 
     printf("Rappresentazione dell'host:\n");
     print_number(n);
@@ -15,14 +15,16 @@ int main(int argc, char *argv[]) {
 
     printf("Rappresentazione di rete:\n");
     /* Converte un intero a 32 bit da host a network byte order */
-    uint32_t nn = htonl(n); /* Mnemonico: (h)ost to (n)etwork (l)ong (32 bit)*/
-    print_number(nn);
+    uint32_t hn = htonl(n); /* Mnemonico: (h)ost to (n)etwork (l)ong (32 bit)*/
+    print_number(hn);
     printf("------\n");
 
 
     printf("Indietro alla rappresentazione dell'host:\n");
     /* Converte un intero a 32 bit da network a host byte order */
-    uint32_t nh = ntohl(nn); /* Mnemonico: (n)etwork to (h)ost (l)ong (32 bit)*/
+    uint32_t nh = ntohl(hn); /* Mnemonico: (n)etwork to (h)ost (l)ong (32 bit)*/
+    /*Usiamo htonl e ntohl(con gli equivalenti per gli short htons e ntohs) per modificare l'endianism dell'indeizzo di rete in input. Nota che la rete usa il big endian
+    (MSB in testa, LSB in coda) per la rappresentazione degli indirizzi. Se anche la macchina usa il big endian, non cambia niente.*/
     print_number(nh);
     printf("------\n");
 

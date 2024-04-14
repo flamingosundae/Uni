@@ -33,6 +33,11 @@ int main(int argc, char *argv[]) {
     
     /* Associa la socket a un indirizzo locale */
     int rv = bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)); /* si noti il cast a "struct sockaddr *", ovvero al tipo generico degli indirizzi delle socket */
+    /*Parametrizzazione:
+    Associamo la socket ad un indirizzo e porta locali.
+    1)Descriptor della socket, come per il client.
+    2)Indirizzo per il bind. Nota il cast.
+    3)Dimensione dell'indirizzo.*/
     if (rv == -1) {
         perror("bind");
         close(sockfd); /* Chiude la socket prima di uscire */
@@ -44,7 +49,7 @@ int main(int argc, char *argv[]) {
         Il server esegue ciclicamente il seguente processo:
         * riceve un messaggio di richiesta (ovvero due interi a 32 bit da sommare)
         * invia un messaggio di risposta (ovvero un intero a 32 bit pari alla somma dei numeri ricevuti nella richiesta),
-          usando l'indirizzo IP e numero di porta di origine nella richiesta come indirizzo di ritorno per la risposta.
+        usando l'indirizzo IP e numero di porta di origine nella richiesta come indirizzo di ritorno per la risposta.
     */
     while (1) {
         /* Struttura popolata da recvfrom con l'indirizzo del mittente */
@@ -63,7 +68,7 @@ int main(int argc, char *argv[]) {
         ssize_t read_count = recvfrom(sockfd, &input, sizeof(input), 0, (struct sockaddr *)&client_addr, &client_addr_len);
         /*                            ^      ^           ^       ^                          ^               ^
           file descriptor della socket|      |           |       |                          |               |
-          puntatore ai dati da spedire ------*           |       |                          |               |
+    puntatore al buffer su cui scrivere i dati ricevuti  |                                                         
           numero di byte da spedire ---------------------*       |                          |               |
           opzioni -----------------------------------------------*                          |               |
           struttura per indirizzo mittente -------------------------------------------------*               |
@@ -89,7 +94,8 @@ int main(int argc, char *argv[]) {
         /* Converto l'indirizzo di rete del mittente in stringa per una stampa di log */
         const int STRING_LENGTH = 15;
         char client_addr_str[STRING_LENGTH + 1]; /* un carattere in piu' per il terminatore della stringa*/
-        if (!inet_ntop(AF_INET, &client_addr.sin_addr, client_addr_str, sizeof(client_addr_str))) { /* il corpo dell'if non dovrebbe essere mai eseguito */
+        if (!inet_ntop(AF_INET, &client_addr.sin_addr, client_addr_str, sizeof(client_addr_str))) //Conversione addr del client in formato presentation
+        { /* il corpo dell'if non dovrebbe essere mai eseguito */
             perror("inet_ntop");
             close(sockfd);
             exit(EXIT_FAILURE);
@@ -106,7 +112,7 @@ int main(int argc, char *argv[]) {
 
         uint32_t data_to_send = htonl(sum); /* Converto il risultato in network byte order */
 
-        sleep(10); /* una sleep dio 10 secondi per facilitare i test */
+        sleep(10); /* una sleep di 10 secondi per facilitare i test */
 
         /*
             Invia un datagramma al client. Gli argomenti hanno un significato analogo (ma complementare) a quanto visto per
@@ -122,7 +128,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    /* Questo e' un semplice serve di esempio, che NON termina mai. Infatti, questa parte di codice non viene mai eseguita. */
+    /* Questo e' un semplice server di esempio, che NON termina mai. Infatti, questa parte di codice non viene mai eseguita. */
    
     /* Chiude la socket */
     close(sockfd);
