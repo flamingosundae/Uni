@@ -35,3 +35,7 @@ Il suo negato è nonvar(X).*/
 
 ordina(X, LX):-
     nonvar(X).
+
+
+
+/*Per casa: scrivi il problema delle 8 regine in prolog. Ti servirà rappresentare la scacchiera, la posizione delle regine, e come disporle sulla scacchiera.*/
