@@ -48,9 +48,9 @@ int main(int argc, char *argv[]) {
     /*Questo è un processo in due fasi. Prima invochiamo fgets, che permette di leggere da un input e depositare il contenuto in un'area di memoria.
     Parametrizzazione:
     1)Dove verrà depositato il contenuto letto dall'input. Nota che fgets restituisce un puntatore, indipercui la conversione del buffer originariamente statico.
-    2)Quanti dati potrà leggere al massimo.
+    2)Quanti dati potrà leggere al massimo. Leggerà max n-1 caratteri(uno in meno di n per aggiungere il terminatore di stringa).
     3)L'input. Con stdin, legge da tastiera.
-    Una volta letto da tastiera e scritto il contenuto su buffer, dunque, il risulrato viene mandato al server, con annesso controllo di errore.*/
+    Una volta letto da tastiera e scritto il contenuto su buffer, dunque, il risultato viene mandato al server, con annesso controllo di errore.*/
 
 
         shutdown(sockfd, SHUT_WR);
@@ -63,6 +63,7 @@ int main(int argc, char *argv[]) {
         while ((nread = recv(sockfd, &buffer, sizeof(buffer), 0)) > 0) {
             write(STDOUT_FILENO, buffer, nread);
         }
+        //rd/wr = snd/rcv con flag dell'ultimo parametro uguale a 0.
         /*Hai già visto rcv, non ci sono differenze eccezionali.
         Tuttavia, nota due cose:
         A)Questa volta cè un ciclo while, il che vuol dire che la socket client continuerà a predisporsi per la ricezione di dati fin quando
