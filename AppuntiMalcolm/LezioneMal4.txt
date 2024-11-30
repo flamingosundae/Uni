@@ -1,4 +1,0 @@
-Abbiamo fatto tutti cose diverse, ma il secondo push è stato rigettato per l'incongruenza fra repo locale e repo di GitHub.
-git reset --hard per tornare ad una specifica versione del commit.
-Con -f puoi FORZARE un push.
-0669421786
