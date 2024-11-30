@@ -1,0 +1,21 @@
+>Macchina a stati finiti? 
+Macchina con un numero finito e delimitato di possibili situazioni
+E.g. Macchinetta del caffé. Poniamo ipoteticamente che produca caffé solo se inserito un euro.
+Hai le tue monete da 10, 20, 50 centesimi. Ogni moneta, e conseguente somma di denaro verso l'1, rappresenta uno stato.
+>Stato iniziale, che può portare a 10, 20, 50, o un euro, il risultato finale.  Così si apre una serie di stati composti di transizioni, 10, 20, 30, ecc.
+Di conseguenza, non mi serve una memoria: sa in ogni momento i suoi stati, e la sua posizione verso il risultato.
+
+>E.g.2: tastierino senza memoria, e solo 3 pulsanti.
+Come visto in
+-Media,
+-Volume,
+-Visual Studio,
+-Chrome.
+
+In teoria, quindi, due sezioni: sezione combinatoria e sezione sequenziale. La sezione combinatoria rappresenta l'input, da dove immetti lo stato. La sezione sequenziale
+rappresenta l'output, ossia lo stato che viene rappresentato dall'input. La sequenziale rappresenta in ogni momento lo stato presente.
+
+Indovinello: siete un prigioniero in una prigione con altri 99 prigionieri. Il guardiano arriva e dice a te "Hai un'ora per organizzare un piano. Ogni prigioniero è in una cella dal quale non può vedere nessuno ed uscire.
+In mezzo a questa prigione vi è una stanza con un interruttore che accende una luce. Potete entrare nella stanza un numero illimitato di volte, rimanere quanto volete, ma non puoi vedere nessuno entrare e uscire dalla porta. 
+Devi assicurarti di sapere quando sono usciti ed entrati tutti.
+https://education.github.com/pack
