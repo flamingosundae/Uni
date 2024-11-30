@@ -62,6 +62,7 @@ diffy(A, B) :-
 
  controlloriga([A, B], [A,C]).
  controllocolonna([A,B], [C,A]).
+
  controllodiagonale([A,B], [C,D]):-
   X is A-C,
   Y is B-D,
