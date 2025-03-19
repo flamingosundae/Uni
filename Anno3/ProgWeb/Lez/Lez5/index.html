@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color:rebeccapurple;
+        }
+
+        p.class
+        {
+            color:aqua ;
+        }
+        
+        #prova
+        {
+            color:green;
+        }
+
+
+        h1
+        {
+            color: red;
+        }
+    </style>
+</head>
+<!--In caso vengano definite più regole di stile DELLO STESSO TIPO per un elemento, si sovrascrivono, con priorità all'ultima definita.-->
+<!--In caso vengano definite regole diverse, prendono precedenza con l'ordine selettoreid > selettoreclasse > selettoreelemento.-->
+<!--I discendenti di un elemento ereditano gli attributi dell'antenato, a meno che non vengano definite regole specifiche per quel tipo/classe/id di discendente.-->
+<!--Se non voglio che una regola venga scritta la posso dichiarare !important. Generalmente, tuttavia, è sempre possibile evitare di utilizzarla.-->
+<body>
+    <h1>Cazzo</h1>
+    <p>
+        ma anche palle
+    </p>
+    
+    <p class="class">
+        scroto, inoltre
+    </p>
+    
+    <p id="prova">
+        perfino uretra
+    </p>
+</body>
+</html>

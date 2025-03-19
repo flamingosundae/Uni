@@ -1,0 +1,60 @@
+body /*0,0,0,1*/
+{
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header,main,footer /*0,0,0,1. In teoria. Chiedi a Loreto.*/
+{
+    color:darkblue;
+    font: size 16px;
+}
+
+a /*0,0,0,1*/
+{
+    color:green;
+}
+
+a:hover /*0,0,1,0*/
+{
+    color:red;
+}
+
+h1,h2,h3 /*0,0,0,1 (?)*/
+{
+    color:orange;
+    font:bold;
+}
+
+ul li /*0,0,0,2*/
+{
+    color:brown;
+    margin:10px;
+}
+
+a.menu /*0,0,1,1*/
+{
+    color:white;
+    background:darkblue;
+}
+
+h1.titolo /*0,0,1,1*/
+{
+    color:red;
+}
+
+p.evidenziato /*0,0,1,1*/
+{
+    color:yellow;
+}
+
+li.lista /*0,0,1,1*/ /*Sovrascrive la regola in riga 29 avendo un valore c maggiore*/
+{
+    color:purple;
+}
+
+footer.appendice /*0,0,1,1. Nota il trick qua: abbiamo definito una nuova classe, introducendo un valore c più altro ed una conseguente priorità della regola maggiore. Avremmo anche potuto dargli un id, ma generalmente è meglio una classe anche per un elemento singolo.*/
+{
+    color:coral;
+}
+
