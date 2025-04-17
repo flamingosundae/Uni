@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap'); /*Importazione dell'url del font da Google Fonts.*/
+
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif; /*Specifica il font da usare, nel formato "font specifico", font generico, serif/sans serif. Specifichiamo una famiglia di font in quanto sistemi operativi diversi hanno font 
+    nativi diversi; sono semplicemente font simili tra loro.*/
+    color:blue;
+    font-size: 30px;
+
+}
+
+
+* /*Prende tutti gli elementi.*/
+{
+    border: 1px solid black;
+}
+
+p
+{
+    font-family: 'DM Serif Text';
+    font-size:0.5em; /*Specifica la dimensione del testo. Nota che con la notazione em usiamo la frazione di un font fornito, o ereditato da un elemento
+    antenato o fornito dallo user agent, che provvederà una grandezza di default per il dispositivo. Possiamo anche usare una percentuale. Nota che TUTTE 
+    le proprietà di font sono ereditabili.*/
+    /*font-size:2vw; Specifica la grandezza del font in relazione alla larghezza del viewport. 1 vw = 1/100 larghezza viewport utente.*/
+    color: #336600;
+    text-decoration:underline; /*Specifica una decorazione del testo. Nota che gli elementi <a> hanno il sottolineato di default: dobbiamo esplicitamente rimuoverlo con a{text-decoration = none} per evitare ciò.*/
+}
+
+p:first-of-type
+{
+    margin-top:50px;
+    margin-bottom: 10px;
+    margin-right:30px;
+    margin-left:20px;
+    padding: 30px; /*Crea spazio tra lo bordo ed il contenuto*/
+    border-color:red;
+
+    /*Dichiarazione equivalente a margin: 50px 10px 30px 20px;. Va in senso orario partendo dal nord.*/
+}

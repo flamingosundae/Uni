@@ -1,0 +1,47 @@
+:root
+{
+    --blue: #1e90ff;
+    --white: #ffffff; /*Per rendere il nostro codice più sintetico e leggibile, possiamo definire quelle che chiamiamo custom properties all'interno dello stylesheet. Possiamo definirle nel formato --var:(caratteristiche variabile).*/
+    --text-color: #000000; /*Anche le variabili di CSS hanno scope diversi. Quelle definite in root sono globali.*/
+}
+
+
+body
+{
+    background-color: var(--blue); /*Esempio di invocazione di una var*/
+}
+
+h2
+{
+    border-bottom: 2px solid var(--blue);
+}
+
+.container
+{
+    color: var(--blue);
+    background-color: var(--white);
+    padding: 15px;
+}
+
+button
+{
+    background-color: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 5px;
+}
+
+.container text
+{
+    color: var(--text-color, black) /*Impostazione di uno stile di fallback. Se la var() non viene caricata propriamente, verrà usata lo stile di fallback.*/
+}
+
+.alert
+{
+    --alert-color: #ff6ff9; /*Variabile locale. Sarà utilizzabile anche dai discendenti.*/
+}
+
+.alert p
+{
+    color: var(--alert-color, pink);
+}

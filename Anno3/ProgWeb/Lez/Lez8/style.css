@@ -1,0 +1,41 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container
+{
+    width: 80vw; /* 1 vw = 1% viewport width */
+    height: 80vh; /* 1 vh = 1% viewport height */
+    background-color: blue;
+    margin: 20px auto;
+    position: relative;
+}
+
+
+.square
+{
+    width:10vh;
+    height:10vh;
+    position: absolute;
+}
+
+.sq1
+{
+    top: 10%;
+    left:40%;
+    background-color:steelblue;
+}
+
+.sq2
+{
+    top:10%;
+    left: 45%;
+    z-index: index 30;
+    width:50 vv;
+    height: 20 vh;
+    position:absolute;
+    background-color:pink;
+}
